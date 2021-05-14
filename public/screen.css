@@ -1,6 +1,13 @@
+/*
+- Rather than have the images grow, the margins grow proportionally to fill whitespace until another octo-cat with minimum margins can fit on the line
+  This requires centering, so the appearance is different ==> centering and resizing are related, address both issues simultaneously
+
+- However, I will build in a standardized 4-wide desktop view to complete explorer mode before approaching this issue
+*/
+
 :root {
   font: 16px / 1 sans-serif;
-  font-weight: 300;
+  font-weight: 350;
 }
 
 html {
@@ -23,6 +30,7 @@ header {
   opacity: 0.6;
   border: 1px solid rgb(187, 187, 187);
   justify-content: space-between;
+  margin: 0rem 0rem 0.25rem 0rem;
 }
 
 header nav {
@@ -92,6 +100,7 @@ footer {
 section {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-evenly;
 }
 section article {
   display: flex;
@@ -99,7 +108,9 @@ section article {
   padding: 0;
   margin: 0;
   justify-content: center;
+  align-items: center;
   flex-grow: 1;
+  width: 375px;
 }
 
 section article ul {
@@ -108,13 +119,14 @@ section article ul {
   list-style: none;
   align-items: center;
   padding: 1rem 0rem 0rem 0rem;
-  margin: 0rem 1.55rem;
-  flex-grow: 1;
-  flex-shrink: 1;
-  max-width: 325px; /* might have to change this so it scales with picture size*/
+  margin: 0rem 1.6rem;
+  /* flex-grow: 1; */
+  /* flex-shrink: 1; */
+  width: 325px; /* might have to change this so it scales with picture size*/
 }
 
 section article ul li {
+  display: flex;
   color: rgb(99, 99, 99);
   text-decoration: none;
 }
@@ -125,11 +137,30 @@ section article ul li a {
   justify-self: center;
 }
 
+section article a {
+  display: flex;
+  width: 100%; /* might have to change this so it scales with picture size*/
+  flex-grow: 1;
+  justify-content: center;
+  /* margin: 0rem; */
+}
+
 section article a img {
   border: 1px solid rgb(213, 213, 213);
   border-radius: 0.5rem;
-  margin: 2.25rem 0rem 0rem 1.5rem;
+  margin: 2.25rem 0rem 0rem 0rem;
 }
-.first-image {
-  margin: 2.5rem 0rem 0rem 1.5rem;
+
+@media all and (min-width: 650px) {
+  /* I like this distance because this option appears on horizontal i-phones, unlike the actual website*/
+  .back-to-github {
+    position: static;
+    padding: 0rem 1rem;
+  }
+  nav ul {
+    margin: 0.5rem 0rem 0.4rem 0rem;
+  }
+}
+
+@media all and (min-width: 1280) {
 }
