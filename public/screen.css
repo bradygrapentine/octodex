@@ -3,6 +3,10 @@
   This requires centering, so the appearance is different ==> centering and resizing are related, address both issues simultaneously
 
 - However, I will build in a standardized 4-wide desktop view to complete explorer mode before approaching this issue
+
+1) whitespace + resizing images
+2) last row centered
+
 */
 
 :root {
