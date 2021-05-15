@@ -1,15 +1,8 @@
 /*
-- Rather than have the images grow, the margins grow proportionally to fill whitespace until another octo-cat with minimum margins can fit on the line
-  This requires centering, so the appearance is different ==> centering and resizing are related, address both issues simultaneously
 
-- However, I will build in a standardized 4-wide desktop view to complete explorer mode before approaching this issue
-
-- add @media query to resize images so four cats display in a row in desktop/laptop view
-- work on paddings and margins to simulate site more accurately and clean up code
-- clean up code generally
-- work on adventure mode
-
-extension => whitespace, resizing images, last row centered
+- clean up code
+- recreate exact fonts, font sizes, and colors --> then, explorer mode: complete
+- recreate website with grids --> then, adventure mode complete
 
 */
 
@@ -27,6 +20,9 @@ body {
   min-height: 100%;
   background-color: rgb(252, 252, 252);
 }
+
+/* ---------------------------------------------------------------------- */
+
 header {
   box-shadow: 7px 6px 15px 15px rgba(213, 213, 213, 0.25);
   display: flex;
@@ -65,23 +61,7 @@ nav ul li a {
   font-size: 0.8rem;
 }
 
-.grey {
-  color: rgb(57, 57, 57);
-}
-
-.back-to-github {
-  position: absolute;
-  right: 100%;
-  padding: 0rem 0.75rem;
-}
-.octodex {
-  font-size: 1.05rem;
-  padding: 0.2rem 0.3rem;
-}
-.octodex img {
-  width: 2.7rem;
-  height: 2.7rem;
-}
+/* ---------------------------------------------------------------------- */
 
 footer {
   display: flex;
@@ -98,26 +78,50 @@ footer {
   font-style: normal; */
 }
 
-/*  */
+/* ---------------------------------------------------------------------- */
 
-/* img {
-  max-width: 100%;
-} */
+.grey {
+  color: rgb(57, 57, 57);
+}
+
+.back-to-github {
+  position: absolute;
+  right: 100%;
+  padding: 0rem 0.75rem;
+}
+
+.octodex {
+  font-size: 1.05rem;
+  padding: 0.2rem 0.3rem;
+}
+
+.octodex img {
+  width: 2.7rem;
+  height: 2.7rem;
+}
+
+/* ---------------------------------------------------------------------- */
 
 section {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-evenly; /*if you turn this off, then work on image resizing, it should fix centering issue and resize images, will need to add flex grows for sure */
+  justify-content: space-evenly;
+  /*if you turn this to flex start, then work on image resizing, 
+  it should fix centering issue and resize images, 
+  will need to add flex grows*/
 }
+
 section article {
   display: flex;
   flex-direction: column;
-  padding: 0;
+  padding: 0.5rem;
   margin: 0;
   justify-content: center;
   align-items: center;
   width: auto;
 }
+
+/* ---------------------------------------------------------------------- */
 
 section article ul {
   display: flex;
@@ -145,9 +149,11 @@ section article ul li a {
   padding-left: 0.35rem;
 }
 
+/* ---------------------------------------------------------------------- */
+
 section article a {
   display: flex;
-  width: auto; /* might have to change this so it scales with picture size */
+  width: auto;
   justify-content: center;
 }
 
@@ -158,26 +164,45 @@ section article a img {
   max-width: 325px;
 }
 
-@media all and (min-width: 650px) {
-  /* I like this distance because this option appears on horizontal phones, unlike the actual website, which doesn't display the back-to-github option until you reach tablet specifications*/
+/* ---------------------------------------------------------------------- */
+
+@media all and (min-width: 650px) and (max-width: 725px) {
+  /* For Horizontal Regular-Size Phones */
   .back-to-github {
     position: static;
     padding: 0rem 1rem;
   }
+
   nav ul {
     margin: -0.3rem 0rem;
   }
+
+  section article ul {
+    width: 18rem;
+  }
+
+  section article {
+    width: 18rem;
+    height: auto;
+  }
+
+  section article a img {
+    width: 18rem;
+    height: 18rem;
+  }
 }
 
-@media all and (min-width: 1024px) {
-  /* for horizontal tablets*/
+@media all and (min-width: 1000px) {
+  /* For Horizontal Tablets*/
   section article ul {
     width: 17.5rem;
   }
+
   section article {
     width: 17.5rem;
     height: auto;
   }
+
   section article a img {
     width: 17.5rem;
     height: 17.5rem;
@@ -185,13 +210,16 @@ section article a img {
 }
 
 @media all and (min-width: 1280px) {
+  /* For Laptops */
   section article ul {
     width: 18rem;
   }
+
   section article {
     width: 18rem;
     height: auto;
   }
+
   section article a img {
     width: 18rem;
     height: 18rem;
@@ -199,13 +227,16 @@ section article a img {
 }
 
 @media all and (min-width: 1440px) {
+  /* For High-Res Laptops */
   section article ul {
     width: 20rem;
   }
+
   section article {
     width: 20rem;
     height: auto;
   }
+
   section article a img {
     width: 20rem;
     height: 20rem;
@@ -213,46 +244,32 @@ section article a img {
 }
 
 @media all and (min-width: 1920px) {
+  /* For Desktops and High-Res TVs */
   section article ul {
     width: 23rem;
     max-width: none;
   }
-  /* section article a {
-    display: flex;
-    width: fit-content;
-    /* might have to change this so it scales with picture size 
-  } */
+
   section article {
     width: 23rem;
     height: auto;
   }
+
   main {
     padding: 0rem 10rem;
   }
+
   nav ul {
     margin: -0.35rem 0rem;
   }
+
   header {
     padding: 0rem 9.5rem 0rem 10rem;
   }
-  /* section article ul li {
-    display: flex;
-    color: rgb(99, 99, 99);
-    text-decoration: none;
-  } */
-  /* section article ul li a {
-    color: black;
-    text-decoration: none;
-    justify-self: center;
-    padding-left: 0.35rem;
-  } */
-  /* section article a {
-    object-fit: cover;
-  } */
+
   section article a img {
     width: 23rem;
     height: 23rem;
     max-width: none;
   }
 }
-/* Need to change article and a size when resizing, consider using rem, since the base value isn't the width of the entire page, but a multiplier proportional to the root font size */
