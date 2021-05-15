@@ -10,7 +10,7 @@ html {
 body {
   margin: 0;
   min-height: 100%;
-  background-color: rgb(252, 252, 252);
+  background-color: rgb(250, 251, 252);
 }
 
 /* ---------------------------------------------------------------------- */
@@ -20,7 +20,7 @@ header {
   display: flex;
   position: sticky;
   top: 0;
-  background-color: rgba(255, 255, 255, 0.7);
+  background-color: rgba(254, 254, 254 0.7);
   border-bottom: 0.1rem solid rgb(223, 223, 223);
   justify-content: space-between;
   margin: 0rem 0rem 0.25rem 0rem;
