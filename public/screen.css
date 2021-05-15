@@ -103,6 +103,9 @@ footer {
 }
 
 /*  */
+img {
+  max-width: 100%;
+}
 
 section {
   display: flex;
@@ -116,21 +119,20 @@ section article {
   margin: 0;
   justify-content: center;
   align-items: center;
-  width: 325px;
+  width: auto;
 }
 
 section article ul {
   display: flex;
   justify-content: space-between;
   list-style: none;
-  align-items: center;
+  align-items: flex-end;
   align-content: center;
   padding: 1rem 0rem 0.4rem 0rem;
   margin: 0rem;
-  /* padding: 1rem 0rem 0rem 0rem;
-
-  margin: 0rem 1.6rem; */
-  width: 100%; /* might have to change this so it scales with picture size*/
+  flex-grow: 1;
+  width: 100%;
+  max-width: 325px;
 }
 
 section article ul li {
@@ -148,7 +150,7 @@ section article ul li a {
 
 section article a {
   display: flex;
-  width: 100%; /* might have to change this so it scales with picture size*/
+  width: auto; /* might have to change this so it scales with picture size */
   justify-content: center;
 }
 
@@ -156,6 +158,7 @@ section article a img {
   border: 1px solid rgb(213, 213, 213);
   border-radius: 0.5rem;
   margin: 2.25rem 0rem 0rem 0rem;
+  max-width: 325px;
 }
 
 @media all and (min-width: 650px) {
@@ -169,34 +172,36 @@ section article a img {
   }
 }
 
-/* @media all and (min-width: 1280) {
-  section article {
-    max-height: 75%;
-    max-width: 75%;
-  }
-
+/* @media all and (min-width: 1280px) {
   section article ul {
-    object-fit: cover;
+    width: 50%;
   }
-
-  /* section article ul li {
+  section article a {
+    display: flex;
+    width: fit-content;
+    /* might have to change this so it scales with picture size */
+/* }
+  section article {
+    width: fit-content(50);
+    height: auto; 
+  }
+  section article ul li {
     display: flex;
     color: rgb(99, 99, 99);
     text-decoration: none;
   }
-  
   section article ul li a {
     color: black;
     text-decoration: none;
     justify-self: center;
     padding-left: 0.35rem;
   } */
-
-  section article a {
+/* section article a {
     object-fit: cover;
-  }
-
+  } 
   section article a img {
-    object-fit: cover;
-  }
-} */
+    width: 50%;
+    height: auto;
+  /* }  */
+
+/* Need to change article and a size when resizing, consider using rem, since the base value isn't the width of the entire page, but a multiplier proportional to the root font size */
