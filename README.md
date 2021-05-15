@@ -1,3 +1,7 @@
+- clean up code
+- recreate exact fonts, font sizes, and colors --> then, explorer mode: complete
+- recreate website with grids --> then, adventure mode complete
+
 # Octodex
 
 GitHub has a great mascot called Octocat. Octocat even has its own gallery of variations, created by GitHub itself and fans, called Octodex.

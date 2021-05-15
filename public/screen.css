@@ -1,11 +1,3 @@
-/*
-
-- clean up code
-- recreate exact fonts, font sizes, and colors --> then, explorer mode: complete
-- recreate website with grids --> then, adventure mode complete
-
-*/
-
 :root {
   font: 16px / 1 sans-serif;
   font-weight: 350;
@@ -106,9 +98,8 @@ section {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  /*if you turn this to flex start, then work on image resizing, 
-  it should fix centering issue and resize images, 
-  will need to add flex grows*/
+  /*if you turn this to flex start, then work on image scaling, 
+  it should fix centering issue and resize images */
 }
 
 section article {
