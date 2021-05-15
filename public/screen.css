@@ -166,6 +166,13 @@ section article a img {
 
 /* ---------------------------------------------------------------------- */
 
+@media all and (min-width: 650px) {
+  /* For Horizontal Regular-Size Phones */
+  .back-to-github {
+    position: static;
+    padding: 0rem 1rem;
+  }
+}
 @media all and (min-width: 650px) and (max-width: 725px) {
   /* For Horizontal Regular-Size Phones */
   .back-to-github {
@@ -243,7 +250,7 @@ section article a img {
   }
 }
 
-@media all and (min-width: 1920px) {
+@media all and (min-width: 1675px) {
   /* For Desktops and High-Res TVs */
   section article ul {
     width: 23rem;
