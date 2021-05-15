@@ -1,5 +1,5 @@
 :root {
-  font: 16px / 1 sans-serif;
+  font: 16px / 1 'Alliance No.1' sans-serif;
   font-weight: 350;
 }
 
@@ -16,12 +16,12 @@ body {
 /* ---------------------------------------------------------------------- */
 
 header {
-  box-shadow: 7px 6px 15px 15px rgba(213, 213, 213, 0.25);
   display: flex;
   position: sticky;
   top: 0;
-  background-color: rgba(254, 254, 254 0.7);
-  border-bottom: 0.1rem solid rgb(223, 223, 223);
+  background-color: rgba(255, 255, 255, 0.75);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+  box-shadow: 0 0.5rem 1.25rem rgba(0, 0, 0, 0.05);
   justify-content: space-between;
   margin: 0rem 0rem 0.25rem 0rem;
 }
@@ -288,3 +288,73 @@ section article a img {
     max-width: none;
   }
 }
+
+/*
+.border {
+ border:1px #e1e4e8 solid !important
+}
+.border-top {
+ border-top:1px #e1e4e8 solid !important
+}
+.rounded-1 {
+ border-radius:3px !important
+}
+.bg-white {
+ background-color:#fff !important
+}
+.bg-gray-light {
+ background-color:#fafbfc !important
+}
+.text-gray {
+ color:#586069 !important
+}
+.text-gray-dark {
+ color:#24292e !important
+}
+.link-gray-dark {
+ color:#24292e !important
+}
+.link-gray-dark:hover {
+ color:#0366d6 !important
+
+.h1 {
+ font-size:26px !important
+}
+@media (min-width: 768px) {
+ .h1 {
+  font-size:32px !important
+ }
+}
+.h2 {
+ font-size:22px !important
+}
+@media (min-width: 768px) {
+ .h2 {
+  font-size:24px !important
+ }
+}
+.h1,
+.h2 {
+ font-weight:600 !important
+}
+.f2 {
+ font-size:22px !important
+}
+@media (min-width: 768px) {
+ .f2 {
+  font-size:24px !important
+ }
+}
+.f4 {
+ font-size:16px !important
+}
+@media (min-width: 768px) {
+ .f4 {
+  font-size:16px !important
+ }
+}
+.text-bold {
+ font-weight:600 !important
+}
+
+*/
