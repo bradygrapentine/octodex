@@ -253,6 +253,24 @@ section article a img {
 @media all and (min-width: 1675px) {
   /* For Desktops and High-Res TVs */
   section article ul {
+    width: 21rem;
+    max-width: none;
+  }
+
+  section article {
+    width: 21rem;
+    height: auto;
+  }
+  section article a img {
+    width: 21rem;
+    height: 21rem;
+    max-width: none;
+  }
+}
+
+@media all and (min-width: 1855px) {
+  /* For Desktops and High-Res TVs */
+  section article ul {
     width: 23rem;
     max-width: none;
   }
@@ -261,7 +279,6 @@ section article a img {
     width: 23rem;
     height: auto;
   }
-
   main {
     padding: 0rem 10rem;
   }
