@@ -159,20 +159,15 @@ section article a img {
 
 /* ---------------------------------------------------------------------- */
 
-@media all and (min-width: 650px) {
+@media all and (min-width: 630px) {
   /* For Horizontal Regular-Size Phones */
   .back-to-github {
     position: static;
     padding: 0rem 1rem;
   }
 }
-@media all and (min-width: 650px) and (max-width: 725px) {
+@media all and (min-width: 630px) and (max-width: 725px) {
   /* For Horizontal Regular-Size Phones */
-  .back-to-github {
-    position: static;
-    padding: 0rem 1rem;
-  }
-
   nav ul {
     margin: -0.3rem 0rem;
   }
